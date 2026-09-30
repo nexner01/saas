@@ -1,0 +1,472 @@
+<!DOCTYPE html>
+
+<html lang="ko"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_dashboard" name="shell-type"/><title>Noteflow Workspace</title><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=JetBrains+Mono:wght@400;500&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "on-secondary-container": "#fffbff", "tertiary-container": "#006e4b", "surface-dim": "#cbdbf5", "secondary-fixed-dim": "#d0bcff", "on-primary-container": "#dad7ff", "on-tertiary-container": "#67f4b7", "surface": "#f8f9ff", "on-surface": "#0b1c30", "background": "#f8f9ff", "on-error-container": "#93000a", "primary-fixed": "#e2dfff", "on-error": "#ffffff", "tertiary": "#005338", "primary-container": "#4f46e5", "surface-container-highest": "#d3e4fe", "tertiary-fixed-dim": "#4edea3", "surface-container-high": "#dce9ff", "error": "#ba1a1a", "inverse-primary": "#c3c0ff", "primary-fixed-dim": "#c3c0ff", "secondary-container": "#8455ef", "surface-container": "#e5eeff", "surface-container-lowest": "#ffffff", "on-secondary-fixed": "#23005c", "on-primary-fixed": "#0f0069", "surface-tint": "#4d44e3", "outline-variant": "#c7c4d8", "secondary-fixed": "#e9ddff", "on-tertiary": "#ffffff", "on-tertiary-fixed": "#002113", "on-surface-variant": "#464555", "on-tertiary-fixed-variant": "#005236", "outline": "#777587", "secondary": "#6b38d4", "surface-container-low": "#eff4ff", "inverse-surface": "#213145", "surface-bright": "#f8f9ff", "on-secondary-fixed-variant": "#5516be", "on-background": "#0b1c30", "tertiary-fixed": "#6ffbbe", "inverse-on-surface": "#eaf1ff", "on-primary-fixed-variant": "#3323cc", "on-secondary": "#ffffff", "primary": "#3525cd", "surface-variant": "#d3e4fe", "error-container": "#ffdad6", "on-primary": "#ffffff" }, "borderRadius": { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" }, "spacing": { "gutter-desktop": "1.5rem", "space-md": "0.875rem", "margin": "1rem", "space-lg": "1.5rem", "margin-tablet": "1.5rem", "gutter": "1rem", "space-sm": "0.5rem", "space-xs": "0.25rem", "space-xl": "2.25rem", "margin-desktop": "2.5rem" }, "fontFamily": { "headline-sm": ["Inter"], "headline-lg-mobile": ["Inter"], "body-md": ["Inter"], "label-md": ["Inter"], "body-lg": ["Inter"], "body-sm": ["Inter"], "code": ["JetBrains Mono"], "display": ["Inter"], "headline-md": ["Inter"], "label-sm": ["Inter"], "headline-lg": ["Inter"], "title-md": ["Inter"] }, "fontSize": { "headline-sm": ["1.25rem", { "lineHeight": "1.75rem", "letterSpacing": "-0.015em", "fontWeight": "600" }], "headline-lg-mobile": ["1.75rem", { "lineHeight": "2.25rem", "letterSpacing": "-0.02em", "fontWeight": "700" }], "body-md": ["0.9375rem", { "lineHeight": "1.5rem", "letterSpacing": "-0.005em", "fontWeight": "400" }], "label-md": ["0.875rem", { "lineHeight": "1.25rem", "letterSpacing": "-0.005em", "fontWeight": "500" }], "body-lg": ["1.0625rem", { "lineHeight": "1.75rem", "letterSpacing": "-0.005em", "fontWeight": "400" }], "body-sm": ["0.8125rem", { "lineHeight": "1.25rem", "letterSpacing": "0", "fontWeight": "400" }], "code": ["0.875rem", { "lineHeight": "1.5rem", "letterSpacing": "0", "fontWeight": "400" }], "display": ["3.5rem", { "lineHeight": "4.25rem", "letterSpacing": "-0.03em", "fontWeight": "700" }], "headline-md": ["1.5rem", { "lineHeight": "2rem", "letterSpacing": "-0.02em", "fontWeight": "600" }], "label-sm": ["0.75rem", { "lineHeight": "1rem", "letterSpacing": "0.01em", "fontWeight": "500" }], "headline-lg": ["2.25rem", { "lineHeight": "2.75rem", "letterSpacing": "-0.025em", "fontWeight": "700" }], "title-md": ["1.125rem", { "lineHeight": "1.625rem", "letterSpacing": "-0.01em", "fontWeight": "600" }] } } } };</script></head><body class="bg-surface font-body-md text-on-surface antialiased"><aside class="fixed left-0 top-0 h-full w-64 bg-surface-container-lowest shadow-[0_1px_8px_rgba(0,0,0,0.04)] z-50 flex flex-col justify-between py-4"><div class="flex flex-col gap-3 px-3"><div class="flex items-center justify-between px-2 py-1"><div class="flex items-center gap-2.5"><img alt="Noteflow Logo" class="h-7 w-auto object-contain" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD67iew-Pc_u0d_MY-7Pmc78Wxg4o2PPn1aAW_mpOQZZaxGDF-yiPeMHdwcQzNu45_W2dL61_pbq2PXAhavYuEs6qrsm59d11ZENoP6w2wEgQJgHyn6ohf5x7QcWpIew1hk2ZG1XBCMrf4rwrWMnRSbCqfe1yrtbvu7aAKO6WvW_HvQ6wz_l8OMGA0zrYQFnFbH_DlIsmuvGtChemAs40RAPzNjskLO5AXjsMXZaj_vSczB8EBTfEZW"/><span class="font-title-md text-title-md text-on-surface font-bold tracking-tight">Noteflow</span></div><button class="text-on-surface-variant hover:text-on-surface p-1 rounded-lg hover:bg-surface-container transition-colors" title="사이드바 접기" type="button"><span class="material-symbols-outlined text-lg leading-none">dock_to_left</span></button></div><div class="flex items-center justify-between px-2.5 py-1.5 rounded-lg bg-surface-container-low hover:bg-surface-container cursor-pointer transition-colors"><div class="flex items-center gap-2 overflow-hidden"><span class="material-symbols-outlined text-base text-primary">folder_supervised</span><span class="font-label-md text-label-md text-on-surface truncate">개인 워크스페이스</span></div><span class="material-symbols-outlined text-base text-on-surface-variant">unfold_more</span></div><div class="relative px-1"><div class="flex items-center justify-between w-full px-2.5 py-1.5 rounded-lg bg-surface-container-low text-on-surface-variant hover:bg-surface-container transition-colors cursor-pointer"><div class="flex items-center gap-2"><span class="material-symbols-outlined text-base">search</span><span class="font-label-sm text-label-sm">빠른 검색 (Quick Find)</span></div><kbd class="font-code text-label-sm bg-surface-container-lowest px-1.5 py-0.5 rounded shadow-[0_1px_4px_rgba(0,0,0,0.04)] text-on-surface-variant">⌘K</kbd></div></div><nav class="flex flex-col gap-1 mt-2" data-active-classes="bg-primary-container text-on-primary-container font-bold"><a class="flex items-center gap-3 px-3 py-2 rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="dashboard" href="#"><span class="material-symbols-outlined text-xl leading-none">dashboard</span><span class="font-label-md text-label-md">대시보드</span></a><a aria-current="page" class="flex items-center gap-3 px-3 py-2 rounded-lg transition-all bg-primary-container text-on-primary-container font-bold" data-path="quick-notes" href="#"><span class="material-symbols-outlined text-xl leading-none">bolt</span><span class="font-label-md text-label-md">빠른 메모</span></a><a class="flex items-center gap-3 px-3 py-2 rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="project-notes" href="#"><span class="material-symbols-outlined text-xl leading-none">description</span><span class="font-label-md text-label-md">프로젝트 노트</span></a><a class="flex items-center gap-3 px-3 py-2 rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="favorites" href="#"><span class="material-symbols-outlined text-xl leading-none">star</span><span class="font-label-md text-label-md">즐겨찾기</span></a><a class="flex items-center gap-3 px-3 py-2 rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="workspace-templates" href="#"><span class="material-symbols-outlined text-xl leading-none">category</span><span class="font-label-md text-label-md">템플릿</span></a><a class="flex items-center gap-3 px-3 py-2 rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="trash" href="#"><span class="material-symbols-outlined text-xl leading-none">delete</span><span class="font-label-md text-label-md">휴지통</span></a></nav></div><div class="flex flex-col gap-3 px-3 pt-3 bg-surface-container-lowest"><div class="p-3 rounded-xl bg-surface-container-low flex flex-col gap-2"><div class="flex items-center justify-between"><span class="font-label-sm text-label-sm text-on-surface-variant">클라우드 스토리지</span><span class="font-label-sm text-label-sm font-semibold text-primary">4.2GB / 15GB</span></div><div class="w-full h-1.5 bg-surface-container-high rounded-full overflow-hidden"><div class="h-full bg-primary rounded-full" style="width: 28%"></div></div><a class="mt-1 flex items-center justify-center gap-1.5 w-full py-1.5 rounded-lg bg-primary text-on-primary hover:bg-primary-container font-label-sm text-label-sm font-medium transition-all" data-path="pricing" href="#"><span>Pro 업그레이드</span><span class="material-symbols-outlined text-sm leading-none">arrow_forward</span></a></div><div class="flex items-center justify-between px-2 py-1.5 rounded-lg hover:bg-surface-container-low transition-colors"><div class="flex items-center gap-2.5"><img alt="Profile" class="w-8 h-8 rounded-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAarXZ4AieuT3143DQu4I75fC0L9qEBEWlGAnIqPtY0J853zAeO9doYCyW5koJdJWR5R3-dKhxip5zkMEAMPyqnbAdB1o-3BtEChQMeRcQ8-LkvBvPNaf_IvUjR-NkIjuuZqMtChSn5ElEDezvm_3pRQK_NTFgjcvY2CaimMidO-xldcmP5zneY5ELDwqeoL-ZrpvEcovmHOo6pK51l0bCO7KdKsXZ9DfN822wLGpx1T4izqtpipVj4"/><div class="flex flex-col"><span class="font-label-md text-label-md text-on-surface leading-tight">김노트</span><span class="font-label-sm text-label-sm text-on-surface-variant leading-tight">user@noteflow.io</span></div></div><a class="text-on-surface-variant hover:text-on-surface p-1 rounded-md transition-colors" data-path="settings" href="#" title="설정"><span class="material-symbols-outlined text-lg leading-none">settings</span></a></div></div></aside><div class="pl-64"><header class="fixed top-0 left-64 right-0 h-16 bg-surface/80 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)] z-40 flex items-center justify-between px-8"><div class="flex items-center gap-3"><button class="text-on-surface-variant hover:text-on-surface p-1.5 rounded-lg hover:bg-surface-container transition-colors" title="탐색기" type="button"><span class="material-symbols-outlined leading-none">menu_open</span></button><span class="font-label-sm text-label-sm text-on-surface-variant font-code">워크스페이스 &gt; 활성 세션</span></div><div class="flex items-center gap-3"><button class="flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-surface-container-low hover:bg-surface-container text-on-surface-variant hover:text-on-surface font-label-sm text-label-sm transition-colors" type="button"><span class="material-symbols-outlined text-base leading-none">history</span><span>최근 변경</span></button><button class="flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-primary text-on-primary hover:bg-primary-container font-label-sm text-label-sm transition-colors" type="button"><span class="material-symbols-outlined text-base leading-none">add</span><span>새 메모</span></button><img alt="Profile" class="w-8 h-8 rounded-full object-cover ml-2" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAarXZ4AieuT3143DQu4I75fC0L9qEBEWlGAnIqPtY0J853zAeO9doYCyW5koJdJWR5R3-dKhxip5zkMEAMPyqnbAdB1o-3BtEChQMeRcQ8-LkvBvPNaf_IvUjR-NkIjuuZqMtChSn5ElEDezvm_3pRQK_NTFgjcvY2CaimMidO-xldcmP5zneY5ELDwqeoL-ZrpvEcovmHOo6pK51l0bCO7KdKsXZ9DfN822wLGpx1T4izqtpipVj4"/></div></header><main class="relative pt-16 bg-surface min-h-screen"><div class="flex flex-col w-full">
+<!-- Dynamic Ambient Glow behind active canvas -->
+<div class="relative w-full overflow-hidden">
+<div class="absolute -top-32 left-1/3 w-96 h-96 bg-primary/5 rounded-full blur-3xl pointer-events-none"></div>
+<div class="absolute top-64 right-1/4 w-80 h-80 bg-secondary/5 rounded-full blur-3xl pointer-events-none"></div>
+<!-- Editorial Top Utility & Collaborative Presence Bar -->
+<section class="sticky top-0 z-30 w-full px-8 py-3 bg-surface/90 backdrop-blur-xl shadow-sm flex items-center justify-between transition-all">
+<!-- Breadcrumb & Auto-save Status -->
+<div class="flex items-center gap-3 min-w-0">
+<div class="flex items-center gap-1.5 text-on-surface-variant font-label-sm text-label-sm overflow-hidden text-ellipsis whitespace-nowrap">
+<span class="hover:text-primary cursor-pointer transition-colors">개인 워크스페이스</span>
+<span class="material-symbols-outlined text-xs text-outline leading-none">chevron_right</span>
+<span class="flex items-center gap-1 hover:text-primary cursor-pointer transition-colors">
+<span class="material-symbols-outlined text-sm leading-none text-secondary">folder</span>
+            2025 제품 기획
+          </span>
+<span class="material-symbols-outlined text-xs text-outline leading-none">chevron_right</span>
+<span class="font-medium text-on-surface truncate">2025 상반기 신규 기능 로드맵</span>
+</div>
+<div class="hidden md:flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-surface-container font-label-sm text-label-sm text-on-surface-variant ml-2">
+<span class="w-1.5 h-1.5 rounded-full bg-tertiary-fixed-dim animate-pulse"></span>
+<span class="text-tertiary font-medium">방금 전 클라우드 저장됨 (Cloud Synced)</span>
+</div>
+</div>
+<!-- Action Group & Collaborators -->
+<div class="flex items-center gap-2.5 shrink-0">
+<!-- Live Presence Avatars -->
+<div class="flex items-center -space-x-2 mr-2">
+<div class="relative group" title="이수민 (동시 편집 중)">
+<img class="w-7 h-7 rounded-full object-cover shadow-sm ring-2 ring-surface-container-lowest" data-alt="Close-up professional headshot of a female Korean UI/UX designer with soft natural studio lighting in a modern workspace environment" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDz5SMDDolj3hZa46LkmzYvGbw551IBQX9Urt5Im9vBlKI8-vKfsu-2X5N9Rr1V4lfPWoskp-uotlKJGy_VKjcVVohqriiKFC4CcnMJQ8sLAeCSqgJ7GA-LosnP6FUkpwLpSOoYiLyfSzZ-56E8fjOjHHxuo75dirX-CJCO_KNtR4VqYtGhg5OGhPlxwNA-2OY9JfOH1WOJhV9pA5o77X4zuEw8p6DD-LAmWI23qpOBMRPOhZihRNwh"/>
+<span class="absolute bottom-0 right-0 w-2 h-2 rounded-full bg-tertiary-fixed-dim ring-1 ring-surface-container-lowest"></span>
+</div>
+<div class="relative group" title="박준형 (열람 중)">
+<img class="w-7 h-7 rounded-full object-cover shadow-sm ring-2 ring-surface-container-lowest" data-alt="Portrait of a young male Korean software engineer smiling with clean background and gentle warm cinematic lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuASJt_cUUhLFJ1FgVes1ZJFn8nmKkNbCqNowOtXlHoiKY5N2Z13pyQ_WkIPVEoY2PsA1Utb7VQ5upsg-sqiN-xtoGWRRNPOZaUyvwhMVxoFpaqD2ycCkvroHyIoLF0dq7Hkb-twqQwMDUb0xZadsBEfh1IN88ZFtn6dk7PaA7V4GS8nDmarZeoI3jO5GEI9qLp3ClHcY8e0AfMx7EUoaNL_dc2prKFiV8UjnrU8IInOTfgHVfzHAe1c"/>
+</div>
+<div class="w-7 h-7 rounded-full bg-surface-container-highest text-on-surface flex items-center justify-center font-label-sm text-label-sm font-semibold shadow-sm ring-2 ring-surface-container-lowest">
+            +3
+          </div>
+</div>
+<!-- AI Assistant Action Button -->
+<button class="flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-surface-container-low hover:bg-surface-container text-primary font-label-sm text-label-sm font-semibold transition-all hover:shadow-sm active:scale-95" id="aiTriggerBtn">
+<span class="material-symbols-outlined text-base text-primary leading-none" style="font-variation-settings: 'FILL' 1;">auto_awesome</span>
+<span>AI로 다듬기</span>
+</button>
+<!-- Share & Export -->
+<div class="flex items-center bg-surface-container-low rounded-lg p-0.5">
+<button class="flex items-center gap-1 px-2.5 py-1.5 rounded-md hover:bg-surface-container-lowest text-on-surface-variant hover:text-on-surface font-label-sm text-label-sm transition-all" title="공유 설정">
+<span class="material-symbols-outlined text-base leading-none">ios_share</span>
+<span class="hidden sm:inline">공유</span>
+</button>
+<button class="flex items-center gap-1 px-2.5 py-1.5 rounded-md hover:bg-surface-container-lowest text-on-surface-variant hover:text-on-surface font-label-sm text-label-sm transition-all" title="내보내기">
+<span class="material-symbols-outlined text-base leading-none">file_download</span>
+<span class="hidden sm:inline">PDF/MD</span>
+</button>
+</div>
+<button class="p-1.5 text-on-surface-variant hover:text-on-surface hover:bg-surface-container rounded-lg transition-colors" title="세부 옵션">
+<span class="material-symbols-outlined text-lg leading-none">more_horiz</span>
+</button>
+<button class="flex items-center gap-1 px-3.5 py-1.5 rounded-lg bg-primary text-on-primary hover:bg-primary-container font-label-sm text-label-sm font-semibold shadow-sm transition-all active:scale-95">
+<span>발행하기</span>
+<span class="material-symbols-outlined text-xs leading-none">north_east</span>
+</button>
+</div>
+</section>
+<!-- Main Editor Dual Canvas Layout -->
+<div class="flex flex-row w-full justify-center px-4 lg:px-8 py-6 gap-8">
+<!-- Primary Document Canvas Center -->
+<article class="flex-1 max-w-[840px] w-full min-w-0 transition-all flex flex-col">
+<!-- Cover Art Banner (Interactive Minimal) -->
+<div class="relative w-full h-44 rounded-2xl overflow-hidden mb-6 group bg-surface-container-low shadow-sm">
+<div class="w-full h-full bg-cover bg-center transition-transform duration-700 group-hover:scale-105" data-alt="A tranquil, minimalist workspace atmosphere showing clean aesthetic stationery, soft ambient morning light, subtle indigo tones, and geometric shadows" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCWwgindYJGD_95LklOUJ_XnARxVejBHNz_oKjMoABOVuWIYQmsK77pSMRVRHO7YkdYKnjQU1twam494i1rJCK3IDu9IipGkaCGwX89bd7ay9H-vPjzP-z8q15Xdxdr8BSBri7SouWSao8DR-qhB2haQ7B5lGuf-BwxyoSAmC9VtfcTQBaGsuqwtpT0H_PTXxhNYjOWUfDrLbDyg6Z9aVDPJ3Fz1CjBMFKF7YLsjGg1K6HgdaNzekF4')"></div>
+<div class="absolute inset-0 bg-gradient-to-t from-on-surface/40 via-transparent to-transparent"></div>
+<div class="absolute bottom-3 right-3 flex items-center gap-2 opacity-0 group-hover:opacity-100 transition-opacity">
+<button class="px-2.5 py-1 rounded-lg bg-surface/90 backdrop-blur-md text-on-surface font-label-sm text-label-sm hover:bg-surface transition-all flex items-center gap-1 shadow-sm">
+<span class="material-symbols-outlined text-sm leading-none">photo_camera</span>
+              커버 변경
+            </button>
+<button class="px-2 py-1 rounded-lg bg-surface/90 backdrop-blur-md text-on-surface-variant hover:text-error font-label-sm text-label-sm hover:bg-surface transition-all">
+<span class="material-symbols-outlined text-sm leading-none">delete</span>
+</button>
+</div>
+</div>
+<!-- Note Header & Properties Panel -->
+<header class="flex flex-col gap-4 mb-8">
+<!-- Page Icon & Meta Control -->
+<div class="flex items-center justify-between -mt-12 mb-1 px-2">
+<div class="w-16 h-16 rounded-2xl bg-surface-container-lowest shadow-md flex items-center justify-center text-3xl cursor-pointer hover:rotate-6 transition-transform select-none group relative">
+<span>💡</span>
+<div class="absolute inset-0 rounded-2xl bg-on-surface/5 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+<span class="material-symbols-outlined text-xs text-on-surface-variant">edit</span>
+</div>
+</div>
+<div class="flex items-center gap-2 pt-8">
+<button class="flex items-center gap-1 px-2.5 py-1 rounded-lg text-on-surface-variant hover:bg-surface-container font-label-sm text-label-sm transition-colors">
+<span class="material-symbols-outlined text-sm leading-none">lock</span>
+                잠금 해제됨
+              </button>
+<button class="flex items-center gap-1 px-2.5 py-1 rounded-lg text-on-surface-variant hover:bg-surface-container font-label-sm text-label-sm transition-colors">
+<span class="material-symbols-outlined text-sm leading-none">favorite</span>
+                즐겨찾기
+              </button>
+</div>
+</div>
+<!-- Document Title (Editable Feeling) -->
+<div class="px-2">
+<h1 class="font-headline-lg text-headline-lg text-on-surface outline-none focus:ring-0 tracking-tight leading-tight [word-break:keep-all]" contenteditable="true" spellcheck="false">
+              2025년 상반기 AI 기반 스마트 메모 기능 로드맵
+            </h1>
+</div>
+<!-- Structured Metadata Sheet -->
+<div class="flex flex-col gap-2.5 px-3 py-3.5 rounded-xl bg-surface-container-low shadow-sm">
+<!-- Row 1: Timestamps -->
+<div class="flex items-center text-on-surface-variant font-label-sm text-label-sm">
+<div class="w-32 flex items-center gap-1.5 shrink-0 text-outline">
+<span class="material-symbols-outlined text-sm leading-none">schedule</span>
+<span>최종 수정일시</span>
+</div>
+<span class="font-code text-on-surface font-medium">2025. 05. 15 14:40 (KST)</span>
+</div>
+<!-- Row 2: Dynamic Tags -->
+<div class="flex items-center text-on-surface-variant font-label-sm text-label-sm">
+<div class="w-32 flex items-center gap-1.5 shrink-0 text-outline">
+<span class="material-symbols-outlined text-sm leading-none">label</span>
+<span>태그 속성</span>
+</div>
+<div class="flex flex-wrap items-center gap-1.5">
+<span class="px-2.5 py-0.5 rounded-full bg-primary-fixed text-on-primary-fixed-variant font-label-sm text-label-sm font-medium">#제품기획</span>
+<span class="px-2.5 py-0.5 rounded-full bg-secondary-fixed text-on-secondary-fixed-variant font-label-sm text-label-sm font-medium">#AI어시스턴트</span>
+<span class="px-2.5 py-0.5 rounded-full bg-error-container text-on-error-container font-label-sm text-label-sm font-medium">#우선순위-높음</span>
+<button class="flex items-center gap-0.5 px-2 py-0.5 rounded-full bg-surface-container hover:bg-surface-container-high text-outline hover:text-on-surface transition-colors font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-xs leading-none">add</span>
+<span>태그 추가</span>
+</button>
+</div>
+</div>
+<!-- Row 3: Backlinks & References -->
+<div class="flex items-center text-on-surface-variant font-label-sm text-label-sm">
+<div class="w-32 flex items-center gap-1.5 shrink-0 text-outline">
+<span class="material-symbols-outlined text-sm leading-none">link</span>
+<span>연결된 노트</span>
+</div>
+<div class="flex flex-wrap items-center gap-2">
+<a class="flex items-center gap-1 px-2 py-0.5 rounded-md bg-surface-container-lowest hover:bg-surface-container-high text-primary font-label-sm text-label-sm shadow-sm transition-colors" href="#">
+<span class="material-symbols-outlined text-xs leading-none">description</span>
+<span>2025 Q1 사용자 인터뷰 분석</span>
+</a>
+<a class="flex items-center gap-1 px-2 py-0.5 rounded-md bg-surface-container-lowest hover:bg-surface-container-high text-primary font-label-sm text-label-sm shadow-sm transition-colors" href="#">
+<span class="material-symbols-outlined text-xs leading-none">insights</span>
+<span>경쟁사 기능 벤치마킹 보고서</span>
+</a>
+</div>
+</div>
+</div>
+</header>
+<!-- Markdown Canvas Core -->
+<main class="relative flex flex-col gap-6 px-2 min-h-[640px]">
+<!-- Floating Selection Formatting Toolbar (Craft/Notion Style) -->
+<div class="flex items-center gap-0.5 p-1 rounded-xl bg-inverse-surface text-inverse-on-surface shadow-xl z-20 backdrop-blur-md mb-2 self-start animate-fade-in" id="selectionToolbar">
+<button class="px-2 py-1 rounded hover:bg-on-surface-variant/30 text-inverse-on-surface transition-colors font-bold font-label-sm text-label-sm" title="굵게 (Cmd+B)">B</button>
+<button class="px-2 py-1 rounded hover:bg-on-surface-variant/30 text-inverse-on-surface transition-colors italic font-label-sm text-label-sm" title="기울임 (Cmd+I)">I</button>
+<button class="px-2 py-1 rounded hover:bg-on-surface-variant/30 text-inverse-on-surface transition-colors line-through font-label-sm text-label-sm" title="취소선">S</button>
+<div class="w-px h-3.5 bg-inverse-on-surface/20 mx-0.5"></div>
+<button class="px-2 py-1 rounded hover:bg-on-surface-variant/30 text-inverse-on-surface transition-colors font-code text-label-sm" title="인라인 코드">`&lt;&gt;`</button>
+<button class="flex items-center gap-0.5 px-2 py-1 rounded hover:bg-on-surface-variant/30 text-inverse-primary transition-colors font-label-sm text-label-sm" title="제목 스타일">
+<span>H2</span>
+<span class="material-symbols-outlined text-xs leading-none">arrow_drop_down</span>
+</button>
+<button class="p-1 rounded hover:bg-on-surface-variant/30 text-inverse-on-surface transition-colors" title="하이라이트">
+<span class="material-symbols-outlined text-sm leading-none">format_ink_highlighter</span>
+</button>
+<button class="p-1 rounded hover:bg-on-surface-variant/30 text-inverse-on-surface transition-colors" title="인용구">
+<span class="material-symbols-outlined text-sm leading-none">format_quote</span>
+</button>
+<button class="p-1 rounded hover:bg-on-surface-variant/30 text-inverse-on-surface transition-colors" title="체크리스트 변환">
+<span class="material-symbols-outlined text-sm leading-none">check_box</span>
+</button>
+<div class="w-px h-3.5 bg-inverse-on-surface/20 mx-0.5"></div>
+<button class="flex items-center gap-1 px-2 py-1 rounded bg-primary text-on-primary font-label-sm text-label-sm font-medium hover:bg-primary-container transition-all">
+<span class="material-symbols-outlined text-xs leading-none" style="font-variation-settings: 'FILL' 1;">auto_awesome</span>
+<span>AI 편집</span>
+</button>
+</div>
+<!-- Section 1: Core Objectives with Tasks -->
+<div class="flex flex-col gap-3 group" id="section-core">
+<div class="flex items-baseline justify-between">
+<h2 class="font-headline-md text-headline-md text-on-surface font-bold tracking-tight">1. 핵심 개발 목표 (Core Objectives)</h2>
+<span class="opacity-0 group-hover:opacity-100 text-outline hover:text-on-surface cursor-pointer text-xs font-code transition-opacity">#core-goals</span>
+</div>
+<p class="font-body-lg text-body-lg text-on-surface-variant leading-relaxed [word-break:keep-all]">
+              2025년 상반기 Noteflow의 최우선 과제는 사용자가 작성한 비정형 텍스트와 회의록을 자율 분석하여 지능형 지식 그래프로 연결하는 것입니다. 사용자의 키보드 흐름을 끊지 않는 극대화된 반응 속도와 실시간 로컬-클라우드 동기화 파이프라인을 구축합니다.
+            </p>
+<!-- Task Checklist Elements -->
+<div class="flex flex-col gap-2 mt-2 bg-surface-container-lowest p-3.5 rounded-xl shadow-sm">
+<label class="flex items-start gap-2.5 cursor-pointer group/item">
+<input checked="" class="mt-1 rounded text-primary focus:ring-primary w-4 h-4 bg-surface-container-high transition-all" type="checkbox"/>
+<span class="font-body-md text-body-md text-on-surface line-through text-outline transition-colors">
+                  온디바이스 경량 LLM(SLM)을 활용한 오프라인 문맥 자동완성 엔트리포인트 설계
+                </span>
+</label>
+<label class="flex items-start gap-2.5 cursor-pointer group/item">
+<input checked="" class="mt-1 rounded text-primary focus:ring-primary w-4 h-4 bg-surface-container-high transition-all" type="checkbox"/>
+<span class="font-body-md text-body-md text-on-surface line-through text-outline transition-colors">
+                  다차원 문서 백링크(Bidirectional linking) 그래프 시각화 레이아웃 완료
+                </span>
+</label>
+<label class="flex items-start gap-2.5 cursor-pointer group/item">
+<input class="mt-1 rounded text-primary focus:ring-primary w-4 h-4 bg-surface-container-high transition-all" type="checkbox"/>
+<span class="font-body-md text-body-md text-on-surface group-hover/item:text-primary transition-colors">
+                  실시간 마크다운 협업 충돌 방지를 위한 CRDT(Conflict-free Replicated Data Type) 엔진 통합
+                </span>
+</label>
+<label class="flex items-start gap-2.5 cursor-pointer group/item">
+<input class="mt-1 rounded text-primary focus:ring-primary w-4 h-4 bg-surface-container-high transition-all" type="checkbox"/>
+<span class="font-body-md text-body-md text-on-surface group-hover/item:text-primary transition-colors">
+                  모바일 제스처 기반 빠른 카드 캡처 및 음성 녹음 실시간 STT 정리 피처 개발
+                </span>
+</label>
+</div>
+</div>
+<!-- Highlight Callout Box -->
+<div class="p-4 rounded-xl bg-surface-container-high text-on-surface flex items-start gap-3 shadow-sm transition-all hover:bg-surface-container-highest">
+<div class="w-8 h-8 rounded-lg bg-primary-container text-on-primary-container flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-lg leading-none" style="font-variation-settings: 'FILL' 1;">campaign</span>
+</div>
+<div class="flex flex-col gap-0.5">
+<span class="font-label-md text-label-md font-bold text-on-surface">💡 엔지니어링 스프린트 중요 안내</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+                AI 스마트 태깅 및 자동 카테고리 제안 모듈은 <strong class="text-on-surface">6월 둘째 주 비공개 베타 릴리즈</strong>로 제공됩니다. QA 엔지니어링 그룹은 5월 28일까지 회귀 테스트 시나리오를 최종 제출해 주시기 바랍니다.
+              </p>
+</div>
+</div>
+<!-- Section 2: Priority Feature Matrix Table -->
+<div class="flex flex-col gap-3 group mt-4" id="section-matrix">
+<div class="flex items-baseline justify-between">
+<h2 class="font-headline-md text-headline-md text-on-surface font-bold tracking-tight">2. 우선순위 기능 매트릭스 (Feature Matrix)</h2>
+<span class="opacity-0 group-hover:opacity-100 text-outline hover:text-on-surface cursor-pointer text-xs font-code transition-opacity">#matrix</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+              각 기능의 사용자 가치와 개발 공수 난이도를 수치화하여 배포 사이클을 3단계로 분할 관리합니다.
+            </p>
+<!-- Clean Borderless Elevated Data Table -->
+<div class="overflow-x-auto rounded-xl bg-surface-container-lowest shadow-sm">
+<table class="w-full text-left font-body-sm text-body-sm">
+<thead>
+<tr class="bg-surface-container text-on-surface font-label-md text-label-md">
+<th class="py-3 px-4 font-semibold">기능명 (Feature)</th>
+<th class="py-3 px-4 font-semibold">담당 팀</th>
+<th class="py-3 px-4 font-semibold">릴리즈 일정</th>
+<th class="py-3 px-4 font-semibold">진행 상태</th>
+<th class="py-3 px-4 font-semibold">우선순위</th>
+</tr>
+</thead>
+<tbody class="divide-y-0">
+<tr class="hover:bg-surface-container-low transition-colors">
+<td class="py-3 px-4 font-medium text-on-surface flex items-center gap-2">
+<span class="material-symbols-outlined text-sm text-primary">psychology</span>
+                      문맥 기반 스마트 제안
+                    </td>
+<td class="py-3 px-4 text-on-surface-variant">코어 AI팀</td>
+<td class="py-3 px-4 font-code text-on-surface">2025. 06. 10</td>
+<td class="py-3 px-4">
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-surface-container-highest text-on-surface font-label-sm text-label-sm">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>
+                        개발 중 (65%)
+                      </span>
+</td>
+<td class="py-3 px-4">
+<span class="px-2 py-0.5 rounded bg-error-container text-on-error-container font-label-sm text-label-sm font-bold">P0 (최우선)</span>
+</td>
+</tr>
+<tr class="hover:bg-surface-container-low transition-colors">
+<td class="py-3 px-4 font-medium text-on-surface flex items-center gap-2">
+<span class="material-symbols-outlined text-sm text-secondary">sync_alt</span>
+                      CRDT 멀티플레이어 협업
+                    </td>
+<td class="py-3 px-4 text-on-surface-variant">플랫폼 엔진팀</td>
+<td class="py-3 px-4 font-code text-on-surface">2025. 06. 24</td>
+<td class="py-3 px-4">
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-surface-container-highest text-on-surface font-label-sm text-label-sm">
+<span class="w-1.5 h-1.5 rounded-full bg-tertiary"></span>
+                        아키텍처 검토
+                      </span>
+</td>
+<td class="py-3 px-4">
+<span class="px-2 py-0.5 rounded bg-error-container text-on-error-container font-label-sm text-label-sm font-bold">P0 (최우선)</span>
+</td>
+</tr>
+<tr class="hover:bg-surface-container-low transition-colors">
+<td class="py-3 px-4 font-medium text-on-surface flex items-center gap-2">
+<span class="material-symbols-outlined text-sm text-tertiary">polyline</span>
+                      노트 그래프 3D 시각화
+                    </td>
+<td class="py-3 px-4 text-on-surface-variant">프론트엔드 비주얼팀</td>
+<td class="py-3 px-4 font-code text-on-surface">2025. 07. 15</td>
+<td class="py-3 px-4">
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-surface-container-highest text-on-surface font-label-sm text-label-sm">
+<span class="w-1.5 h-1.5 rounded-full bg-outline"></span>
+                        기획 대기
+                      </span>
+</td>
+<td class="py-3 px-4">
+<span class="px-2 py-0.5 rounded bg-surface-container-highest text-on-surface-variant font-label-sm text-label-sm font-medium">P2 (보통)</span>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<!-- Section 3: Technical Integration Code Block -->
+<div class="flex flex-col gap-3 group mt-4" id="section-api">
+<div class="flex items-baseline justify-between">
+<h2 class="font-headline-md text-headline-md text-on-surface font-bold tracking-tight">3. Noteflow AI SDK 연동 인터페이스</h2>
+<span class="opacity-0 group-hover:opacity-100 text-outline hover:text-on-surface cursor-pointer text-xs font-code transition-opacity">#sdk-spec</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+              클라이언트 에디터 내에서 실시간 마크다운 스트리밍을 파싱하고 자동 액션 아이템을 추출하기 위한 표준 핸들러 스펙입니다:
+            </p>
+<!-- Code Block with Custom Surface & Syntax Style -->
+<div class="rounded-xl overflow-hidden bg-inverse-surface shadow-md flex flex-col font-code text-code">
+<!-- Code Block Header -->
+<div class="flex items-center justify-between px-4 py-2.5 bg-inverse-surface text-inverse-on-surface/70 text-xs">
+<div class="flex items-center gap-2">
+<span class="w-2.5 h-2.5 rounded-full bg-error"></span>
+<span class="w-2.5 h-2.5 rounded-full bg-surface-dim"></span>
+<span class="w-2.5 h-2.5 rounded-full bg-tertiary-fixed-dim"></span>
+<span class="ml-2 font-medium text-inverse-on-surface">noteflow-agent-client.ts</span>
+</div>
+<button class="flex items-center gap-1 px-2 py-1 rounded hover:bg-surface-variant/20 text-inverse-on-surface transition-colors" title="코드 복사">
+<span class="material-symbols-outlined text-xs leading-none">content_copy</span>
+<span>Copy</span>
+</button>
+</div>
+<!-- Code Content -->
+<div class="p-4 text-inverse-on-surface overflow-x-auto leading-relaxed">
+<pre class="font-code text-body-sm leading-6"><code><span class="text-tertiary-fixed-dim">import</span> { NoteflowSession, AIStreamParser } <span class="text-tertiary-fixed-dim">from</span> <span class="text-on-tertiary-container">'@noteflow/core'</span>;
+
+<span class="text-outline-variant">// 1. 비동기 실시간 문맥 세션 초기화</span>
+<span class="text-tertiary-fixed-dim">export const</span> <span class="text-inverse-primary">initializeAISummaryStream</span> = <span class="text-tertiary-fixed-dim">async</span> (noteId: <span class="text-secondary-fixed">string</span>) =&gt; {
+  <span class="text-tertiary-fixed-dim">const</span> session = <span class="text-tertiary-fixed-dim">await</span> NoteflowSession.connect({
+    endpoint: <span class="text-on-tertiary-container">'wss://api.noteflow.io/v2/stream'</span>,
+    authMode: <span class="text-on-tertiary-container">'workspace_bearer'</span>,
+  });
+
+  <span class="text-tertiary-fixed-dim">return</span> session.subscribe(noteId, {
+    onTokenChunk: (delta) =&gt; editor.appendGhostText(delta),
+    onComplete: (metadata) =&gt; telemetry.recordSyncSuccess(metadata),
+  });
+};</code></pre>
+</div>
+</div>
+</div>
+<!-- Slash Command Input Trigger Bar (Inline Prompt) -->
+<div class="mt-6 p-3 rounded-xl bg-surface-container-low hover:bg-surface-container text-on-surface-variant flex items-center justify-between cursor-text transition-all group shadow-sm">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-base text-primary animate-pulse">terminal</span>
+<span class="font-body-md text-body-md group-hover:text-on-surface">명령어를 입력하려면 <kbd class="px-1.5 py-0.5 rounded bg-surface-container-lowest font-code text-xs text-on-surface shadow-sm">/</kbd> 키를 누르세요 (AI 작성, 표, 체크리스트, 코드 블록...)</span>
+</div>
+<div class="flex items-center gap-1.5">
+<span class="font-label-sm text-label-sm text-outline">최근 사용: </span>
+<span class="px-2 py-0.5 rounded bg-surface-container text-on-surface font-code text-xs">/table</span>
+<span class="px-2 py-0.5 rounded bg-surface-container text-on-surface font-code text-xs">/ai-action</span>
+</div>
+</div>
+</main>
+</article>
+<!-- Right Collapsible Assistant Sidebar (AI & Outline) -->
+<aside class="w-80 shrink-0 hidden xl:flex flex-col gap-6 sticky top-20 self-start h-[calc(100vh-6rem)] overflow-y-auto pr-1">
+<!-- Noteflow AI Interactive Agent Card -->
+<div class="flex flex-col p-4 rounded-2xl bg-surface-container-lowest shadow-md relative overflow-hidden">
+<div class="absolute -right-6 -bottom-6 w-24 h-24 bg-primary/10 rounded-full blur-xl pointer-events-none"></div>
+<div class="flex items-center justify-between mb-3">
+<div class="flex items-center gap-2">
+<div class="w-7 h-7 rounded-lg bg-primary text-on-primary flex items-center justify-center">
+<span class="material-symbols-outlined text-base leading-none" style="font-variation-settings: 'FILL' 1;">auto_awesome</span>
+</div>
+<span class="font-title-md text-title-md text-on-surface font-bold">Noteflow AI</span>
+</div>
+<span class="px-2 py-0.5 rounded-full bg-primary-fixed text-on-primary-fixed font-label-sm text-label-sm font-semibold">Pro v3</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mb-3 leading-relaxed">
+            현재 문서의 문맥을 실시간으로 파악하여 생산성을 높이는 스마트 어시스턴트입니다.
+          </p>
+<!-- Prompt Action Chips -->
+<div class="flex flex-col gap-2">
+<button class="w-full text-left p-2.5 rounded-xl bg-surface-container-low hover:bg-surface-container text-on-surface transition-all flex items-center justify-between group active:scale-98">
+<div class="flex items-center gap-2 min-w-0">
+<span class="material-symbols-outlined text-base text-primary leading-none">summarize</span>
+<span class="font-label-md text-label-md truncate">이 문서 3줄 요약</span>
+</div>
+<span class="material-symbols-outlined text-xs text-outline group-hover:text-primary transition-colors">arrow_forward</span>
+</button>
+<button class="w-full text-left p-2.5 rounded-xl bg-surface-container-low hover:bg-surface-container text-on-surface transition-all flex items-center justify-between group active:scale-98">
+<div class="flex items-center gap-2 min-w-0">
+<span class="material-symbols-outlined text-base text-secondary leading-none">task_alt</span>
+<span class="font-label-md text-label-md truncate">회의록 액션 아이템 추출</span>
+</div>
+<span class="material-symbols-outlined text-xs text-outline group-hover:text-secondary transition-colors">arrow_forward</span>
+</button>
+<button class="w-full text-left p-2.5 rounded-xl bg-surface-container-low hover:bg-surface-container text-on-surface transition-all flex items-center justify-between group active:scale-98">
+<div class="flex items-center gap-2 min-w-0">
+<span class="material-symbols-outlined text-base text-tertiary leading-none">translate</span>
+<span class="font-label-md text-label-md truncate">글로벌 영문 문서로 번역</span>
+</div>
+<span class="material-symbols-outlined text-xs text-outline group-hover:text-tertiary transition-colors">arrow_forward</span>
+</button>
+</div>
+<!-- Quick AI Prompt Input -->
+<div class="mt-4 pt-3 flex items-center gap-2">
+<div class="relative flex-1">
+<input class="w-full px-3 py-2 text-xs rounded-lg bg-surface-container text-on-surface placeholder:text-outline outline-none focus:bg-surface-container-high transition-colors" placeholder="AI에게 질문이나 지시하기..." type="text"/>
+</div>
+<button class="p-2 rounded-lg bg-primary text-on-primary hover:bg-primary-container transition-colors shrink-0 shadow-sm" title="질문 전송">
+<span class="material-symbols-outlined text-sm leading-none">send</span>
+</button>
+</div>
+</div>
+<!-- Table of Contents (Outline Navigation) -->
+<div class="flex flex-col p-4 rounded-2xl bg-surface-container-lowest shadow-sm">
+<div class="flex items-center justify-between mb-3 text-on-surface">
+<div class="flex items-center gap-2 font-label-md text-label-md font-semibold">
+<span class="material-symbols-outlined text-base leading-none text-outline">format_list_bulleted</span>
+<span>문서 목차 (Outline)</span>
+</div>
+<span class="font-code text-xs text-outline">3개 항목</span>
+</div>
+<nav class="flex flex-col gap-1 text-on-surface-variant font-label-sm text-label-sm">
+<a class="flex items-center gap-2 px-2.5 py-1.5 rounded-lg bg-primary-fixed text-on-primary-fixed-variant font-medium transition-colors" href="#section-core">
+<span class="w-1.5 h-1.5 rounded-full bg-primary"></span>
+<span class="truncate">1. 핵심 개발 목표 (Core Objectives)</span>
+</a>
+<a class="flex items-center gap-2 px-2.5 py-1.5 rounded-lg hover:bg-surface-container hover:text-on-surface transition-colors" href="#section-matrix">
+<span class="w-1.5 h-1.5 rounded-full bg-outline"></span>
+<span class="truncate">2. 우선순위 기능 매트릭스</span>
+</a>
+<a class="flex items-center gap-2 px-2.5 py-1.5 rounded-lg hover:bg-surface-container hover:text-on-surface transition-colors" href="#section-api">
+<span class="w-1.5 h-1.5 rounded-full bg-outline"></span>
+<span class="truncate">3. Noteflow AI SDK 연동</span>
+</a>
+</nav>
+</div>
+<!-- Document Metadata Quick Stats -->
+<div class="flex flex-col p-4 rounded-2xl bg-surface-container-low text-on-surface-variant font-label-sm text-label-sm gap-2">
+<div class="flex items-center justify-between">
+<span>총 글자 수 (Characters)</span>
+<span class="font-code text-on-surface font-semibold">1,482자</span>
+</div>
+<div class="flex items-center justify-between">
+<span>예상 소요 읽기 시간</span>
+<span class="font-code text-on-surface font-semibold">2분 15초</span>
+</div>
+<div class="flex items-center justify-between">
+<span>참여 기여자</span>
+<span class="font-code text-on-surface font-semibold">4명</span>
+</div>
+</div>
+</aside>
+</div>
+</div>
+</div>
+<script>
+  // Simple micro-interaction for AI trigger highlight
+  document.getElementById('aiTriggerBtn')?.addEventListener('click', () => {
+    const toolbar = document.getElementById('selectionToolbar');
+    if (toolbar) {
+      toolbar.classList.add('scale-105');
+      setTimeout(() => toolbar.classList.remove('scale-105'), 200);
+    }
+  });
+</script></main></div></body></html>

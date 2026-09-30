@@ -1,0 +1,514 @@
+<!DOCTYPE html>
+
+<html lang="ko"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_standard" name="shell-type"/><title>Noteflow - 모던 클라우드 노팅 워크스페이스</title><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=JetBrains+Mono:wght@400;500&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "on-secondary-container": "#fffbff", "tertiary-container": "#006e4b", "surface-dim": "#cbdbf5", "secondary-fixed-dim": "#d0bcff", "on-primary-container": "#dad7ff", "on-tertiary-container": "#67f4b7", "surface": "#f8f9ff", "on-surface": "#0b1c30", "background": "#f8f9ff", "on-error-container": "#93000a", "primary-fixed": "#e2dfff", "on-error": "#ffffff", "tertiary": "#005338", "primary-container": "#4f46e5", "surface-container-highest": "#d3e4fe", "tertiary-fixed-dim": "#4edea3", "surface-container-high": "#dce9ff", "error": "#ba1a1a", "inverse-primary": "#c3c0ff", "primary-fixed-dim": "#c3c0ff", "secondary-container": "#8455ef", "surface-container": "#e5eeff", "surface-container-lowest": "#ffffff", "on-secondary-fixed": "#23005c", "on-primary-fixed": "#0f0069", "surface-tint": "#4d44e3", "outline-variant": "#c7c4d8", "secondary-fixed": "#e9ddff", "on-tertiary": "#ffffff", "on-tertiary-fixed": "#002113", "on-surface-variant": "#464555", "on-tertiary-fixed-variant": "#005236", "outline": "#777587", "secondary": "#6b38d4", "surface-container-low": "#eff4ff", "inverse-surface": "#213145", "surface-bright": "#f8f9ff", "on-secondary-fixed-variant": "#5516be", "on-background": "#0b1c30", "tertiary-fixed": "#6ffbbe", "inverse-on-surface": "#eaf1ff", "on-primary-fixed-variant": "#3323cc", "on-secondary": "#ffffff", "primary": "#3525cd", "surface-variant": "#d3e4fe", "error-container": "#ffdad6", "on-primary": "#ffffff" }, "borderRadius": { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" }, "spacing": { "gutter-desktop": "1.5rem", "space-md": "0.875rem", "margin": "1rem", "space-lg": "1.5rem", "margin-tablet": "1.5rem", "gutter": "1rem", "space-sm": "0.5rem", "space-xs": "0.25rem", "space-xl": "2.25rem", "margin-desktop": "2.5rem" }, "fontFamily": { "headline-sm": ["Inter"], "headline-lg-mobile": ["Inter"], "body-md": ["Inter"], "label-md": ["Inter"], "body-lg": ["Inter"], "body-sm": ["Inter"], "code": ["JetBrains Mono"], "display": ["Inter"], "headline-md": ["Inter"], "label-sm": ["Inter"], "headline-lg": ["Inter"], "title-md": ["Inter"] }, "fontSize": { "headline-sm": ["1.25rem", { "lineHeight": "1.75rem", "letterSpacing": "-0.015em", "fontWeight": "600" }], "headline-lg-mobile": ["1.75rem", { "lineHeight": "2.25rem", "letterSpacing": "-0.02em", "fontWeight": "700" }], "body-md": ["0.9375rem", { "lineHeight": "1.5rem", "letterSpacing": "-0.005em", "fontWeight": "400" }], "label-md": ["0.875rem", { "lineHeight": "1.25rem", "letterSpacing": "-0.005em", "fontWeight": "500" }], "body-lg": ["1.0625rem", { "lineHeight": "1.75rem", "letterSpacing": "-0.005em", "fontWeight": "400" }], "body-sm": ["0.8125rem", { "lineHeight": "1.25rem", "letterSpacing": "0", "fontWeight": "400" }], "code": ["0.875rem", { "lineHeight": "1.5rem", "letterSpacing": "0", "fontWeight": "400" }], "display": ["3.5rem", { "lineHeight": "4.25rem", "letterSpacing": "-0.03em", "fontWeight": "700" }], "headline-md": ["1.5rem", { "lineHeight": "2rem", "letterSpacing": "-0.02em", "fontWeight": "600" }], "label-sm": ["0.75rem", { "lineHeight": "1rem", "letterSpacing": "0.01em", "fontWeight": "500" }], "headline-lg": ["2.25rem", { "lineHeight": "2.75rem", "letterSpacing": "-0.025em", "fontWeight": "700" }], "title-md": ["1.125rem", { "lineHeight": "1.625rem", "letterSpacing": "-0.01em", "fontWeight": "600" }] } } } };</script></head><body class="bg-surface font-body-md text-on-surface antialiased"><header class="fixed top-0 left-0 right-0 z-50 bg-surface-container-lowest/80 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="h-16 max-w-7xl mx-auto px-6 lg:px-12 flex items-center justify-between"><div class="flex items-center gap-8"><a class="flex items-center gap-3" data-path="landing" href="#"><img alt="Noteflow Logo" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD67iew-Pc_u0d_MY-7Pmc78Wxg4o2PPn1aAW_mpOQZZaxGDF-yiPeMHdwcQzNu45_W2dL61_pbq2PXAhavYuEs6qrsm59d11ZENoP6w2wEgQJgHyn6ohf5x7QcWpIew1hk2ZG1XBCMrf4rwrWMnRSbCqfe1yrtbvu7aAKO6WvW_HvQ6wz_l8OMGA0zrYQFnFbH_DlIsmuvGtChemAs40RAPzNjskLO5AXjsMXZaj_vSczB8EBTfEZW"/><span class="font-title-md text-title-md text-on-surface tracking-tight">Noteflow</span></a><nav class="hidden md:flex items-center gap-6" data-active-classes="text-primary font-bold"><a class="font-label-md text-label-md text-on-surface-variant hover:text-on-surface transition-colors" data-path="product-features" href="#">제품 기능</a><a class="font-label-md text-label-md text-on-surface-variant hover:text-on-surface transition-colors" data-path="templates" href="#">템플릿</a><a aria-current="page" class="transition-colors text-primary font-bold" data-path="pricing" href="#">요금제</a><a class="font-label-md text-label-md text-on-surface-variant hover:text-on-surface transition-colors" data-path="enterprise" href="#">엔터프라이즈</a></nav></div><div class="flex items-center gap-4"><a class="font-label-md text-label-md text-on-surface-variant hover:text-on-surface transition-colors px-3 py-2" data-path="login" href="#">로그인</a><a class="inline-flex items-center justify-center font-label-md text-label-md text-on-primary bg-primary hover:bg-primary-container px-4 py-2 rounded-lg transition-all shadow-[0_1px_4px_rgba(53,37,205,0.25)]" data-path="signup" href="#">무료로 시작하기</a><img alt="Profile" class="w-8 h-8 rounded-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAarXZ4AieuT3143DQu4I75fC0L9qEBEWlGAnIqPtY0J853zAeO9doYCyW5koJdJWR5R3-dKhxip5zkMEAMPyqnbAdB1o-3BtEChQMeRcQ8-LkvBvPNaf_IvUjR-NkIjuuZqMtChSn5ElEDezvm_3pRQK_NTFgjcvY2CaimMidO-xldcmP5zneY5ELDwqeoL-ZrpvEcovmHOo6pK51l0bCO7KdKsXZ9DfN822wLGpx1T4izqtpipVj4"/></div></div></header><main class="w-full pt-16 bg-surface"><div class="flex flex-col w-full">
+<!-- Subtle Ambient Glow -->
+<div class="relative w-full overflow-hidden">
+<div class="absolute -top-32 left-1/2 -translate-x-1/2 w-[720px] h-[340px] bg-primary-fixed/50 blur-[130px] rounded-full pointer-events-none -z-10"></div>
+<div class="absolute top-96 right-10 w-[420px] h-[320px] bg-secondary-fixed/40 blur-[120px] rounded-full pointer-events-none -z-10"></div>
+<!-- Header Section -->
+<section class="max-w-6xl mx-auto px-6 lg:px-12 pt-12 pb-16 text-center">
+<div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-surface-container-high text-primary font-label-sm text-label-sm mb-6 shadow-sm">
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">bolt</span>
+<span class="font-medium tracking-tight">전 세계 120,000+ 지식 근로자가 선택한 스마트 노트</span>
+</div>
+<h1 class="font-headline-lg text-headline-lg md:text-[2.75rem] md:leading-[3.25rem] text-on-surface tracking-tight max-w-3xl mx-auto [word-break:keep-all]">
+        당신의 생산성을 극대화하는 플랜을 선택하세요
+      </h1>
+<p class="mt-4 font-body-lg text-body-lg text-on-surface-variant max-w-xl mx-auto [word-break:keep-all]">
+        생각을 정돈하고, 지식을 자산으로 전환하세요. 언제든 위약금 없이 업그레이드, 다운그레이드 또는 취소가 가능합니다.
+      </p>
+<!-- Billing Toggle Switch -->
+<div class="mt-10 inline-flex items-center gap-3 p-1.5 rounded-full bg-surface-container shadow-inner">
+<button class="px-5 py-2 rounded-full font-label-md text-label-md text-on-surface-variant transition-all duration-200" id="monthly-toggle-btn">
+          월간 결제
+        </button>
+<button class="flex items-center gap-2 px-5 py-2 rounded-full bg-surface-container-lowest font-label-md text-label-md text-primary font-bold shadow-md transition-all duration-200" id="annual-toggle-btn">
+<span>연간 결제</span>
+<span class="inline-flex items-center px-2 py-0.5 rounded-full bg-primary text-on-primary font-label-sm text-label-sm font-semibold tracking-tight shadow-sm">
+            20% 할인 + 2개월 무료
+          </span>
+</button>
+</div>
+</section>
+<!-- Pricing Cards 3-Tier Grid -->
+<section class="max-w-7xl mx-auto px-6 lg:px-12 pb-24">
+<div class="grid grid-cols-1 lg:grid-cols-3 gap-8 items-stretch">
+<!-- Starter Card -->
+<div class="flex flex-col justify-between p-8 rounded-xl bg-surface-container-lowest shadow-sm hover:shadow-md transition-shadow">
+<div>
+<div class="flex items-center justify-between mb-4">
+<span class="font-title-md text-title-md text-on-surface font-bold">스타터</span>
+<span class="font-code text-code px-2.5 py-1 rounded bg-surface-container text-on-surface-variant">FREE</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mb-6 [word-break:keep-all]">
+              개인적인 생각 정리와 매일의 메모를 가볍게 시작하고 싶은 입문자용 기본 플랜
+            </p>
+<div class="flex items-baseline gap-1 mb-8">
+<span class="font-display text-[2.5rem] leading-none font-bold text-on-surface tracking-tight">₩0</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">/ 평생 무료</span>
+</div>
+<div class="h-px w-full bg-surface-container mb-6"></div>
+<p class="font-label-sm text-label-sm text-on-surface font-semibold mb-4 tracking-wide uppercase">포함된 주요 혜택</p>
+<ul class="space-y-3 font-body-sm text-body-sm text-on-surface-variant">
+<li class="flex items-start gap-2.5">
+<span class="material-symbols-outlined text-[18px] text-tertiary-container mt-0.5">check_circle</span>
+<span class="text-on-surface">무제한 기본 블록 및 텍스트 노트</span>
+</li>
+<li class="flex items-start gap-2.5">
+<span class="material-symbols-outlined text-[18px] text-tertiary-container mt-0.5">check_circle</span>
+<span class="text-on-surface">최대 3대 기기 실시간 동기화</span>
+</li>
+<li class="flex items-start gap-2.5">
+<span class="material-symbols-outlined text-[18px] text-tertiary-container mt-0.5">check_circle</span>
+<span class="text-on-surface">500MB 클라우드 스토리지</span>
+</li>
+<li class="flex items-start gap-2.5">
+<span class="material-symbols-outlined text-[18px] text-tertiary-container mt-0.5">check_circle</span>
+<span>최근 7일 버전 히스토리 보관</span>
+</li>
+<li class="flex items-start gap-2.5 opacity-40">
+<span class="material-symbols-outlined text-[18px] text-outline mt-0.5">remove</span>
+<span>Noteflow AI 스마트 태깅 및 요약</span>
+</li>
+</ul>
+</div>
+<div class="mt-8 pt-6">
+<button class="w-full py-3.5 px-4 rounded-lg bg-surface-container text-on-surface-variant font-label-md text-label-md font-medium cursor-not-allowed text-center transition-all opacity-70" disabled="">
+              현재 이용 중인 플랜
+            </button>
+</div>
+</div>
+<!-- Pro Card (Most Popular, Elevated Glow) -->
+<div class="relative flex flex-col justify-between p-8 rounded-xl bg-surface-container-lowest shadow-xl ring-2 ring-primary-container shadow-primary/10 -mt-2 lg:-mt-4 mb-2 lg:mb-0">
+<!-- Popular Badge -->
+<div class="absolute -top-3.5 left-1/2 -translate-x-1/2 px-4 py-1 rounded-full bg-primary text-on-primary font-label-sm text-label-sm font-semibold shadow-md flex items-center gap-1.5 whitespace-nowrap">
+<span class="material-symbols-outlined text-[15px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span>가장 인기 있는 선택</span>
+</div>
+<div>
+<div class="flex items-center justify-between mb-4 mt-2">
+<span class="font-title-md text-title-md text-primary font-bold">프로 (Pro)</span>
+<span class="font-code text-code px-2.5 py-1 rounded bg-primary-fixed text-on-primary-fixed-variant font-medium">BEST VALUE</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mb-6 [word-break:keep-all]">
+              방대한 지식을 다루는 연구원, 개발자 및 전문가를 위한 올인원 AI 지식베이스
+            </p>
+<div class="flex items-baseline gap-1.5 mb-1">
+<span class="font-display text-[2.75rem] leading-none font-bold text-on-surface tracking-tight transition-all" id="pro-price">₩9,600</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">/ 월</span>
+</div>
+<p class="font-label-sm text-label-sm text-primary mb-7 font-medium" id="pro-billing-cycle">
+              연간 결제 시 ₩115,200 청구 (20% 할인 적용)
+            </p>
+<div class="h-px w-full bg-surface-container mb-6"></div>
+<p class="font-label-sm text-label-sm text-on-surface font-semibold mb-4 tracking-wide uppercase">스타터의 모든 기능과 더불어</p>
+<ul class="space-y-3 font-body-sm text-body-sm text-on-surface-variant">
+<li class="flex items-start gap-2.5">
+<span class="material-symbols-outlined text-[18px] text-primary mt-0.5" style="font-variation-settings: 'FILL' 1;">verified</span>
+<span class="text-on-surface font-medium">무제한 기기 동시 연결 및 동기화</span>
+</li>
+<li class="flex items-start gap-2.5">
+<span class="material-symbols-outlined text-[18px] text-primary mt-0.5" style="font-variation-settings: 'FILL' 1;">verified</span>
+<span class="text-on-surface font-medium">AI 자동 요약, 스마트 태깅 및 Q&amp;A (무제한)</span>
+</li>
+<li class="flex items-start gap-2.5">
+<span class="material-symbols-outlined text-[18px] text-primary mt-0.5" style="font-variation-settings: 'FILL' 1;">verified</span>
+<span class="text-on-surface">50GB 대용량 클라우드 (단일 파일 최대 5GB)</span>
+</li>
+<li class="flex items-start gap-2.5">
+<span class="material-symbols-outlined text-[18px] text-primary mt-0.5" style="font-variation-settings: 'FILL' 1;">verified</span>
+<span class="text-on-surface">버전 히스토리 무제한 열람 및 1클릭 복원</span>
+</li>
+<li class="flex items-start gap-2.5">
+<span class="material-symbols-outlined text-[18px] text-primary mt-0.5" style="font-variation-settings: 'FILL' 1;">verified</span>
+<span class="text-on-surface">PDF / Markdown / LaTeX 고급 내보내기</span>
+</li>
+<li class="flex items-start gap-2.5">
+<span class="material-symbols-outlined text-[18px] text-primary mt-0.5" style="font-variation-settings: 'FILL' 1;">verified</span>
+<span class="text-on-surface">오프라인 모드 암호화 로컬 캐싱 지원</span>
+</li>
+</ul>
+</div>
+<div class="mt-8 pt-6">
+<button class="w-full py-3.5 px-4 rounded-lg bg-primary hover:bg-primary-container text-on-primary font-label-md text-label-md font-semibold text-center shadow-lg shadow-primary/25 hover:shadow-primary/40 active:scale-[0.99] transition-all">
+              Pro 플랜 시작하기 (14일 무료 체험)
+            </button>
+<p class="text-center font-label-sm text-label-sm text-on-surface-variant mt-2.5">체험 기간 중 언제든 비용 없이 해지 가능</p>
+</div>
+</div>
+<!-- Team / Enterprise Card -->
+<div class="flex flex-col justify-between p-8 rounded-xl bg-surface-container-lowest shadow-sm hover:shadow-md transition-shadow">
+<div>
+<div class="flex items-center justify-between mb-4">
+<span class="font-title-md text-title-md text-on-surface font-bold">팀 워크스페이스</span>
+<span class="font-code text-code px-2.5 py-1 rounded bg-surface-container text-on-surface-variant">COLLAB</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mb-6 [word-break:keep-all]">
+              프로젝트와 지식을 공유하고 매끄럽게 협업하는 고성능 팀 및 조직을 위한 솔루션
+            </p>
+<div class="flex items-baseline gap-1.5 mb-1">
+<span class="font-display text-[2.5rem] leading-none font-bold text-on-surface tracking-tight transition-all" id="team-price">₩28,000</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">/ 유저 / 월</span>
+</div>
+<p class="font-label-sm text-label-sm text-on-surface-variant mb-7" id="team-billing-cycle">
+              월간 청구 방식 (멤버 변동에 따라 일할 계산)
+            </p>
+<div class="h-px w-full bg-surface-container mb-6"></div>
+<p class="font-label-sm text-label-sm text-on-surface font-semibold mb-4 tracking-wide uppercase">프로의 모든 기능과 더불어</p>
+<ul class="space-y-3 font-body-sm text-body-sm text-on-surface-variant">
+<li class="flex items-start gap-2.5">
+<span class="material-symbols-outlined text-[18px] text-secondary mt-0.5">group</span>
+<span class="text-on-surface font-medium">초저지연 실시간 캔버스 동시 편집 &amp; 커서 공유</span>
+</li>
+<li class="flex items-start gap-2.5">
+<span class="material-symbols-outlined text-[18px] text-secondary mt-0.5">admin_panel_settings</span>
+<span class="text-on-surface font-medium">세분화된 워크스페이스 그룹 및 역할 권한 관리</span>
+</li>
+<li class="flex items-start gap-2.5">
+<span class="material-symbols-outlined text-[18px] text-secondary mt-0.5">key</span>
+<span class="text-on-surface">Okta, Google Workspace SSO &amp; SAML 2.0</span>
+</li>
+<li class="flex items-start gap-2.5">
+<span class="material-symbols-outlined text-[18px] text-secondary mt-0.5">shield</span>
+<span class="text-on-surface">99.9% 가동 시간 보장 (SLA 협약)</span>
+</li>
+<li class="flex items-start gap-2.5">
+<span class="material-symbols-outlined text-[18px] text-secondary mt-0.5">support_agent</span>
+<span class="text-on-surface">한국어 우선 기술 지원 및 1:1 온보딩 매니저</span>
+</li>
+<li class="flex items-start gap-2.5">
+<span class="material-symbols-outlined text-[18px] text-secondary mt-0.5">cloud_done</span>
+<span class="text-on-surface">유저당 1TB 통합 공유 클라우드 풀</span>
+</li>
+</ul>
+</div>
+<div class="mt-8 pt-6">
+<button class="w-full py-3.5 px-4 rounded-lg bg-surface-container-high hover:bg-surface-container-highest text-on-surface font-label-md text-label-md font-semibold text-center active:scale-[0.99] transition-all">
+              팀 플랜 시작하기
+            </button>
+<p class="text-center font-label-sm text-label-sm text-on-surface-variant mt-2.5">엔터프라이즈 맞춤 계약은 영업팀 문의</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Social Proof Metric Ribbon -->
+<section class="max-w-7xl mx-auto px-6 lg:px-12 pb-24">
+<div class="p-8 rounded-xl bg-surface-container-low shadow-sm">
+<div class="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
+<div>
+<div class="font-display text-[2rem] leading-none font-bold text-primary mb-1">99.99%</div>
+<div class="font-body-sm text-body-sm text-on-surface-variant">클라우드 데이터 동기화 안정성</div>
+</div>
+<div>
+<div class="font-display text-[2rem] leading-none font-bold text-on-surface mb-1">120,000+</div>
+<div class="font-body-sm text-body-sm text-on-surface-variant">글로벌 활성 워크스페이스</div>
+</div>
+<div>
+<div class="font-display text-[2rem] leading-none font-bold text-on-surface mb-1">&lt; 35ms</div>
+<div class="font-body-sm text-body-sm text-on-surface-variant">로컬 퍼스트 실시간 렌더링 지연</div>
+</div>
+<div>
+<div class="font-display text-[2rem] leading-none font-bold text-tertiary-container mb-1">ISO 27001</div>
+<div class="font-body-sm text-body-sm text-on-surface-variant">엔터프라이즈급 보안 인증 획득</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Detailed Feature Comparison Matrix -->
+<section class="max-w-7xl mx-auto px-6 lg:px-12 pb-28">
+<div class="text-center max-w-2xl mx-auto mb-12">
+<h2 class="font-headline-md text-headline-md text-on-surface tracking-tight">상세 기능 비교 매트릭스</h2>
+<p class="font-body-md text-body-md text-on-surface-variant mt-2">각 플랜에서 지원되는 모든 세부 스펙을 꼼꼼하게 비교해보세요.</p>
+</div>
+<div class="overflow-x-auto rounded-xl bg-surface-container-lowest shadow-sm">
+<table class="w-full text-left font-body-sm text-body-sm">
+<thead>
+<tr class="bg-surface-container-low text-on-surface">
+<th class="py-4 px-6 font-title-md text-title-md font-bold w-2/5">핵심 스펙 및 기능</th>
+<th class="py-4 px-4 font-title-md text-title-md text-center w-1/5">스타터</th>
+<th class="py-4 px-4 font-title-md text-title-md text-center text-primary font-bold w-1/5 bg-primary-fixed/20">프로 (Pro)</th>
+<th class="py-4 px-4 font-title-md text-title-md text-center w-1/5">팀 워크스페이스</th>
+</tr>
+</thead>
+<tbody class="divide-y-0 text-on-surface">
+<!-- Group: Storage & Sync -->
+<tr class="bg-surface-container/50">
+<td class="py-3 px-6 font-label-md text-label-md font-bold text-on-surface-variant" colspan="4">
+                스토리지 및 기기 동기화
+              </td>
+</tr>
+<tr class="hover:bg-surface-container-low/50">
+<td class="py-3.5 px-6">동시 동기화 가능 기기 수</td>
+<td class="py-3.5 px-4 text-center text-on-surface-variant">최대 3대</td>
+<td class="py-3.5 px-4 text-center font-semibold text-primary bg-primary-fixed/10">무제한</td>
+<td class="py-3.5 px-4 text-center font-semibold">무제한</td>
+</tr>
+<tr class="hover:bg-surface-container-low/50">
+<td class="py-3.5 px-6">제공 클라우드 저장 공간</td>
+<td class="py-3.5 px-4 text-center text-on-surface-variant">500MB</td>
+<td class="py-3.5 px-4 text-center font-semibold text-primary bg-primary-fixed/10">50GB</td>
+<td class="py-3.5 px-4 text-center font-semibold">유저당 1TB 풀</td>
+</tr>
+<tr class="hover:bg-surface-container-low/50">
+<td class="py-3.5 px-6">단일 파일 최대 업로드 제한</td>
+<td class="py-3.5 px-4 text-center text-on-surface-variant">10MB</td>
+<td class="py-3.5 px-4 text-center text-on-surface bg-primary-fixed/10">5GB</td>
+<td class="py-3.5 px-4 text-center text-on-surface">무제한</td>
+</tr>
+<tr class="hover:bg-surface-container-low/50">
+<td class="py-3.5 px-6">버전 히스토리 및 변경 복원</td>
+<td class="py-3.5 px-4 text-center text-on-surface-variant">최근 7일</td>
+<td class="py-3.5 px-4 text-center font-semibold text-primary bg-primary-fixed/10">무제한 영구 보관</td>
+<td class="py-3.5 px-4 text-center font-semibold">무제한 영구 보관</td>
+</tr>
+<!-- Group: AI Knowledge Tools -->
+<tr class="bg-surface-container/50">
+<td class="py-3 px-6 font-label-md text-label-md font-bold text-on-surface-variant" colspan="4">
+                인공지능 및 지식 가공 (AI Engine)
+              </td>
+</tr>
+<tr class="hover:bg-surface-container-low/50">
+<td class="py-3.5 px-6">Noteflow AI 지식 검색 &amp; 어시스턴트</td>
+<td class="py-3.5 px-4 text-center text-on-surface-variant">월 15회 맛보기</td>
+<td class="py-3.5 px-4 text-center font-semibold text-primary bg-primary-fixed/10">무제한 사용</td>
+<td class="py-3.5 px-4 text-center font-semibold">무제한 (팀 지식베이스 통합)</td>
+</tr>
+<tr class="hover:bg-surface-container-low/50">
+<td class="py-3.5 px-6">노트 자동 요약 및 핵심 액션 아이템 추출</td>
+<td class="py-3.5 px-4 text-center text-outline">
+<span class="material-symbols-outlined text-[18px]">remove</span>
+</td>
+<td class="py-3.5 px-4 text-center text-primary bg-primary-fixed/10">
+<span class="material-symbols-outlined text-[20px]" style="font-variation-settings: 'FILL' 1;">check</span>
+</td>
+<td class="py-3.5 px-4 text-center text-on-surface">
+<span class="material-symbols-outlined text-[20px]" style="font-variation-settings: 'FILL' 1;">check</span>
+</td>
+</tr>
+<tr class="hover:bg-surface-container-low/50">
+<td class="py-3.5 px-6">양방향 링크 그래프 시각화 (Graph View)</td>
+<td class="py-3.5 px-4 text-center text-on-surface-variant">기본 2D 그래프</td>
+<td class="py-3.5 px-4 text-center font-semibold text-primary bg-primary-fixed/10">다차원 인터랙티브 3D 그래프</td>
+<td class="py-3.5 px-4 text-center font-semibold">전사 워크스페이스 그래프</td>
+</tr>
+<!-- Group: Collaboration & Security -->
+<tr class="bg-surface-container/50">
+<td class="py-3 px-6 font-label-md text-label-md font-bold text-on-surface-variant" colspan="4">
+                협업 및 엔터프라이즈 보안
+              </td>
+</tr>
+<tr class="hover:bg-surface-container-low/50">
+<td class="py-3.5 px-6">동시 실시간 협업 및 코멘트 스레드</td>
+<td class="py-3.5 px-4 text-center text-outline">
+<span class="material-symbols-outlined text-[18px]">remove</span>
+</td>
+<td class="py-3.5 px-4 text-center text-on-surface-variant bg-primary-fixed/10">웹 읽기 링크 공유</td>
+<td class="py-3.5 px-4 text-center font-semibold text-on-surface">
+                실시간 동시 편집 (무제한)
+              </td>
+</tr>
+<tr class="hover:bg-surface-container-low/50">
+<td class="py-3.5 px-6">Single Sign-On (SAML / Okta / Azure AD)</td>
+<td class="py-3.5 px-4 text-center text-outline">
+<span class="material-symbols-outlined text-[18px]">remove</span>
+</td>
+<td class="py-3.5 px-4 text-center text-outline bg-primary-fixed/10">
+<span class="material-symbols-outlined text-[18px]">remove</span>
+</td>
+<td class="py-3.5 px-4 text-center text-on-surface font-semibold">
+<span class="material-symbols-outlined text-[20px]" style="font-variation-settings: 'FILL' 1;">check</span>
+</td>
+</tr>
+<tr class="hover:bg-surface-container-low/50">
+<td class="py-3.5 px-6">보안 감사 로그 (Audit Logs) &amp; IP 접근 제어</td>
+<td class="py-3.5 px-4 text-center text-outline">
+<span class="material-symbols-outlined text-[18px]">remove</span>
+</td>
+<td class="py-3.5 px-4 text-center text-outline bg-primary-fixed/10">
+<span class="material-symbols-outlined text-[18px]">remove</span>
+</td>
+<td class="py-3.5 px-4 text-center text-on-surface font-semibold">
+<span class="material-symbols-outlined text-[20px]" style="font-variation-settings: 'FILL' 1;">check</span>
+</td>
+</tr>
+<tr class="hover:bg-surface-container-low/50">
+<td class="py-3.5 px-6">고객 지원 체계</td>
+<td class="py-3.5 px-4 text-center text-on-surface-variant">커뮤니티 포럼</td>
+<td class="py-3.5 px-4 text-center font-medium text-primary bg-primary-fixed/10">우선순위 이메일 지원 (24시간 내)</td>
+<td class="py-3.5 px-4 text-center font-semibold text-on-surface">전담 Slack 채널 &amp; 매니저 배정</td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+<!-- Payment & Guarantee Badge Callout -->
+<section class="max-w-5xl mx-auto px-6 lg:px-12 pb-20">
+<div class="flex flex-col sm:flex-row items-center justify-between gap-6 p-6 rounded-xl bg-surface-container-lowest shadow-sm">
+<div class="flex items-center gap-4">
+<div class="w-12 h-12 rounded-full bg-tertiary-fixed flex items-center justify-center text-tertiary">
+<span class="material-symbols-outlined text-[28px]">verified_user</span>
+</div>
+<div>
+<h4 class="font-title-md text-title-md text-on-surface">14일간 100% 무조건 환불 보장</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">유료 플랜 결제 후 만족하지 못하셨다면, 클릭 한 번으로 전액 환불받으실 수 있습니다.</p>
+</div>
+</div>
+<div class="flex items-center gap-3">
+<span class="px-3 py-1 rounded bg-surface-container font-code text-code text-on-surface-variant">SSL 256-BIT 암호화</span>
+<span class="px-3 py-1 rounded bg-surface-container font-code text-code text-on-surface-variant">신용카드/카카오페이/토스</span>
+</div>
+</div>
+</section>
+<!-- FAQ Accordion Section -->
+<section class="max-w-4xl mx-auto px-6 lg:px-12 pb-24">
+<div class="text-center mb-12">
+<h2 class="font-headline-md text-headline-md text-on-surface tracking-tight">자주 묻는 질문 (FAQ)</h2>
+<p class="font-body-md text-body-md text-on-surface-variant mt-2">구독 및 결제와 관련해 궁금한 점들을 정리해두었습니다.</p>
+</div>
+<div class="space-y-4">
+<!-- Item 1 -->
+<div class="faq-item rounded-xl bg-surface-container-lowest shadow-sm transition-all overflow-hidden">
+<button class="faq-toggle w-full text-left py-5 px-6 flex items-center justify-between gap-4">
+<span class="font-title-md text-title-md text-on-surface font-semibold">어떤 결제 수단을 지원하나요?</span>
+<span class="material-symbols-outlined text-on-surface-variant transition-transform duration-200">expand_more</span>
+</button>
+<div class="faq-content hidden px-6 pb-6 pt-1 font-body-md text-body-md text-on-surface-variant [word-break:keep-all]">
+            국내외 모든 주요 신용카드(Visa, MasterCard, AMEX, 현대, 삼성, 신한 등)뿐만 아니라 간편결제(카카오페이, 토스페이, 네이버페이, Apple Pay)를 공식 지원합니다. 팀 및 엔터프라이즈 플랜의 경우 전자세금계산서 발행 및 계좌이체 후불 청구 방식도 가능합니다.
+          </div>
+</div>
+<!-- Item 2 -->
+<div class="faq-item rounded-xl bg-surface-container-lowest shadow-sm transition-all overflow-hidden">
+<button class="faq-toggle w-full text-left py-5 px-6 flex items-center justify-between gap-4">
+<span class="font-title-md text-title-md text-on-surface font-semibold">플랜 변경 시 요금은 어떻게 계산되나요?</span>
+<span class="material-symbols-outlined text-on-surface-variant transition-transform duration-200">expand_more</span>
+</button>
+<div class="faq-content hidden px-6 pb-6 pt-1 font-body-md text-body-md text-on-surface-variant [word-break:keep-all]">
+            플랜 업그레이드는 즉시 반영되며, 기존 요금제에서 남은 일수만큼의 금액이 일할 계산되어 신규 플랜 요금에서 차감 청구됩니다. 다운그레이드의 경우 다음 결제 주기 시작일까지 현재 플랜 기능이 유지되며 이후 자동으로 전환됩니다.
+          </div>
+</div>
+<!-- Item 3 -->
+<div class="faq-item rounded-xl bg-surface-container-lowest shadow-sm transition-all overflow-hidden">
+<button class="faq-toggle w-full text-left py-5 px-6 flex items-center justify-between gap-4">
+<span class="font-title-md text-title-md text-on-surface font-semibold">팀 플랜에서 멤버가 중간에 추가되거나 퇴사하면 어떻게 되나요?</span>
+<span class="material-symbols-outlined text-on-surface-variant transition-transform duration-200">expand_more</span>
+</button>
+<div class="faq-content hidden px-6 pb-6 pt-1 font-body-md text-body-md text-on-surface-variant [word-break:keep-all]">
+            팀 멤버를 초대하시면 결제 주기의 남은 일수에 비례하여 일할 정산되어 다음 청구 시 합산됩니다. 멤버를 내보내는 즉시 해당 유저의 라이선스는 회수되며, 크레딧으로 적립되어 차후 결제 금액에 자동 적용됩니다. 불필요한 중복 결제가 발생하지 않도록 완벽히 자동화되어 있습니다.
+          </div>
+</div>
+<!-- Item 4 -->
+<div class="faq-item rounded-xl bg-surface-container-lowest shadow-sm transition-all overflow-hidden">
+<button class="faq-toggle w-full text-left py-5 px-6 flex items-center justify-between gap-4">
+<span class="font-title-md text-title-md text-on-surface font-semibold">무료 체험이 끝나면 자동으로 유료 결제되나요?</span>
+<span class="material-symbols-outlined text-on-surface-variant transition-transform duration-200">expand_more</span>
+</button>
+<div class="faq-content hidden px-6 pb-6 pt-1 font-body-md text-body-md text-on-surface-variant [word-break:keep-all]">
+            프로 플랜 14일 무료 체험 기간 중에는 언제든 설정 화면에서 클릭 한 번으로 체험을 해지하실 수 있으며, 체험 종료 3일 전에 알림 이메일을 발송해 드립니다. 해지 시 추가 청구는 절대 발생하지 않습니다.
+          </div>
+</div>
+<!-- Item 5 -->
+<div class="faq-item rounded-xl bg-surface-container-lowest shadow-sm transition-all overflow-hidden">
+<button class="faq-toggle w-full text-left py-5 px-6 flex items-center justify-between gap-4">
+<span class="font-title-md text-title-md text-on-surface font-semibold">학생이나 비영리 단체를 위한 특별 할인이 있나요?</span>
+<span class="material-symbols-outlined text-on-surface-variant transition-transform duration-200">expand_more</span>
+</button>
+<div class="faq-content hidden px-6 pb-6 pt-1 font-body-md text-body-md text-on-surface-variant [word-break:keep-all]">
+            네! 유효한 학교 웹메일(.ac.kr 또는 .edu)을 보유한 학생 및 교육자에게는 프로 플랜 50% 영구 할인을 제공합니다. 비영리 단체(NPO)의 경우 고객지원팀으로 고유번호증을 제출해주시면 검토 후 특별 지원 플랜을 안내해 드립니다.
+          </div>
+</div>
+</div>
+</section>
+<!-- Bottom Final CTA Banner -->
+<section class="max-w-7xl mx-auto px-6 lg:px-12 pb-24">
+<div class="relative overflow-hidden rounded-2xl bg-primary text-on-primary p-10 md:p-14 shadow-2xl flex flex-col md:flex-row items-center justify-between gap-8">
+<div class="relative z-10 max-w-xl text-center md:text-left">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-on-primary-container font-semibold">Risk-free trial</span>
+<h3 class="font-headline-md text-headline-md md:text-headline-lg md:font-headline-lg text-on-primary tracking-tight mt-2 mb-3 [word-break:keep-all]">
+            생각의 흐름을 멈추지 마세요. 지금 Noteflow Pro를 경험해보세요.
+          </h3>
+<p class="font-body-md text-body-md text-on-primary-container [word-break:keep-all]">
+            카드 등록 없이 14일 동안 프로 플랜의 모든 기능을 자유롭게 사용해보실 수 있습니다.
+          </p>
+</div>
+<div class="relative z-10 flex flex-col sm:flex-row items-center gap-3 w-full md:w-auto">
+<button class="w-full sm:w-auto px-7 py-4 rounded-lg bg-surface-container-lowest text-primary font-label-md text-label-md font-bold hover:bg-surface-container-low transition-all shadow-md active:scale-95 whitespace-nowrap">
+            14일 무료 체험 시작
+          </button>
+<button class="w-full sm:w-auto px-6 py-4 rounded-lg bg-white/10 hover:bg-white/20 text-on-primary font-label-md text-label-md font-medium transition-all whitespace-nowrap">
+            영업팀 문의하기
+          </button>
+</div>
+<!-- Ambient decorative shapes in CTA -->
+<div class="absolute -right-20 -top-20 w-80 h-80 rounded-full bg-white/10 blur-2xl pointer-events-none"></div>
+<div class="absolute -left-20 -bottom-20 w-80 h-80 rounded-full bg-secondary/30 blur-2xl pointer-events-none"></div>
+</div>
+</section>
+</div>
+</div>
+<script>
+  // Billing cycle toggle logic
+  const monthlyBtn = document.getElementById('monthly-toggle-btn');
+  const annualBtn = document.getElementById('annual-toggle-btn');
+  const proPrice = document.getElementById('pro-price');
+  const proCycleText = document.getElementById('pro-billing-cycle');
+  const teamPrice = document.getElementById('team-price');
+  const teamCycleText = document.getElementById('team-billing-cycle');
+
+  let isAnnual = true;
+
+  function updateBillingUI() {
+    if (isAnnual) {
+      // Annual Active
+      annualBtn.className = "flex items-center gap-2 px-5 py-2 rounded-full bg-surface-container-lowest font-label-md text-label-md text-primary font-bold shadow-md transition-all duration-200";
+      monthlyBtn.className = "px-5 py-2 rounded-full font-label-md text-label-md text-on-surface-variant transition-all duration-200 hover:text-on-surface";
+      
+      proPrice.textContent = "₩9,600";
+      proCycleText.textContent = "연간 결제 시 ₩115,200 청구 (20% 할인 적용)";
+      
+      teamPrice.textContent = "₩22,400";
+      teamCycleText.textContent = "연간 결제 시 20% 할인 (유저당 ₩268,800/년)";
+    } else {
+      // Monthly Active
+      monthlyBtn.className = "flex items-center gap-2 px-5 py-2 rounded-full bg-surface-container-lowest font-label-md text-label-md text-primary font-bold shadow-md transition-all duration-200";
+      annualBtn.className = "flex items-center gap-2 px-5 py-2 rounded-full font-label-md text-label-md text-on-surface-variant transition-all duration-200 hover:text-on-surface";
+      
+      proPrice.textContent = "₩12,000";
+      proCycleText.textContent = "월간 정기 결제 (언제든 취소 가능)";
+      
+      teamPrice.textContent = "₩28,000";
+      teamCycleText.textContent = "월간 청구 방식 (멤버 변동에 따라 일할 계산)";
+    }
+  }
+
+  monthlyBtn.addEventListener('click', () => {
+    isAnnual = false;
+    updateBillingUI();
+  });
+
+  annualBtn.addEventListener('click', () => {
+    isAnnual = true;
+    updateBillingUI();
+  });
+
+  // FAQ Accordion interaction
+  document.querySelectorAll('.faq-toggle').forEach(button => {
+    button.addEventListener('click', () => {
+      const content = button.nextElementSibling;
+      const icon = button.querySelector('.material-symbols-outlined');
+      const isHidden = content.classList.contains('hidden');
+
+      // Close other accordions
+      document.querySelectorAll('.faq-content').forEach(c => c.classList.add('hidden'));
+      document.querySelectorAll('.faq-toggle .material-symbols-outlined').forEach(i => i.style.transform = 'rotate(0deg)');
+
+      if (isHidden) {
+        content.classList.remove('hidden');
+        icon.style.transform = 'rotate(180deg)';
+      } else {
+        content.classList.add('hidden');
+        icon.style.transform = 'rotate(0deg)';
+      }
+    });
+  });
+</script></main><footer class="w-full bg-surface-container-low py-12"><div class="max-w-7xl mx-auto px-6 lg:px-12"><div class="flex flex-col md:flex-row items-center justify-between gap-6"><div class="flex items-center gap-3"><img alt="Noteflow Logo" class="h-6 w-auto object-contain" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD67iew-Pc_u0d_MY-7Pmc78Wxg4o2PPn1aAW_mpOQZZaxGDF-yiPeMHdwcQzNu45_W2dL61_pbq2PXAhavYuEs6qrsm59d11ZENoP6w2wEgQJgHyn6ohf5x7QcWpIew1hk2ZG1XBCMrf4rwrWMnRSbCqfe1yrtbvu7aAKO6WvW_HvQ6wz_l8OMGA0zrYQFnFbH_DlIsmuvGtChemAs40RAPzNjskLO5AXjsMXZaj_vSczB8EBTfEZW"/><span class="font-title-md text-title-md text-on-surface">Noteflow</span><span class="font-body-sm text-body-sm text-on-surface-variant ml-2">© 2024 Noteflow Cloud Inc. All rights reserved.</span></div><div class="flex items-center gap-6"><a class="font-label-sm text-label-sm text-on-surface-variant hover:text-on-surface transition-colors" data-path="product-features" href="#">기능 소개</a><a class="font-label-sm text-label-sm text-on-surface-variant hover:text-on-surface transition-colors" data-path="templates" href="#">템플릿 갤러리</a><a class="font-label-sm text-label-sm text-on-surface-variant hover:text-on-surface transition-colors" data-path="pricing" href="#">가격 정책</a><a class="font-label-sm text-label-sm text-on-surface-variant hover:text-on-surface transition-colors" data-path="enterprise" href="#">기업용 솔루션</a></div></div></div></footer></body></html>
